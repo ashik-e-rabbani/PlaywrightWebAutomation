@@ -1,0 +1,14 @@
+{
+  "name": "playwrightwebautomation",
+  "version": "1.0.0",
+  "description": "Automation with playwright and javascript",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Ashik Rabbani",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3"
+  }
+}
