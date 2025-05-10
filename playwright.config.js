@@ -14,9 +14,9 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   
-  maxFailures: 3, 
-  timeout:30000,
-  //  maxFailures: 0 (Run all tests, don’t stop on failure) if N>0 then it will count and stop after N, 
+  maxFailures: 3, //  maxFailures: 0 (Run all tests, don’t stop on failure) if N>0 then it will count and stop after N, 
+  timeout:30000, //testTimeOut
+  // actionTimeout: 5000, 
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -41,7 +41,8 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use:{ browserName: 'chromium', headless: true },
+      // use: { ...devices['Desktop Chrome'] },
     },
 
     // {
